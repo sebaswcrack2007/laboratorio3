@@ -6,13 +6,14 @@ public class Producto {
     private String sku;
     private int cantidad;
     private double precio;
+    private String color;
+
 
     public Producto(String nombre, String sku, int cantidad, double precio) {
         this.nombre = nombre;
         this.sku = sku;
         this.cantidad = cantidad;
         this.precio = precio;
-        private String color;
 
     }
 
