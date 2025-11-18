@@ -27,4 +27,34 @@ public class InventarioVista {
         }
     }
 
+    public String pedirNombre() {
+        System.out.print("Ingrese nombre del producto: ");
+        return scanner.nextLine().trim();
+    }
+
+    public String pedirSku() {
+        System.out.print("Ingrese SKU: ");
+        return scanner.nextLine().trim();
+    }
+
+    public int pedirCantidad() {
+        System.out.print("Ingrese cantidad: ");
+        String line = scanner.nextLine().trim();
+        try {
+            return Integer.parseInt(line);
+        } catch (NumberFormatException e) {
+            return 0;
+        }
+    }
+
+    public double pedirPrecio() {
+        System.out.print("Ingrese precio: ");
+        String line = scanner.nextLine().trim();
+        try {
+            return Double.parseDouble(line);
+        } catch (NumberFormatException e) {
+            return 0.0;
+        }
+    }
+
 }
