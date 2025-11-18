@@ -12,6 +12,8 @@ public class Producto {
         this.sku = sku;
         this.cantidad = cantidad;
         this.precio = precio;
+        private String color;
+
     }
 
     public String getNombre() {
