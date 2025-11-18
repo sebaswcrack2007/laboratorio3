@@ -10,4 +10,21 @@ public class InventarioVista {
         this.scanner = new Scanner(System.in);
     }
 
+    public int pedirOpcion() {
+        System.out.println("\n=== Sistema de Inventario ===");
+        System.out.println("1. Agregar producto");
+        System.out.println("2. Buscar producto");
+        System.out.println("3. Listar productos");
+        System.out.println("4. Eliminar producto");
+        System.out.println("5. Salir");
+        System.out.print("Seleccione una opción: ");
+
+        String line = scanner.nextLine();
+        try {
+            return Integer.parseInt(line.trim());
+        } catch (NumberFormatException e) {
+            return -1;
+        }
+    }
+
 }
