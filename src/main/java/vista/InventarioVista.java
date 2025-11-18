@@ -1,6 +1,8 @@
 package vista;
 
 import java.util.Scanner;
+import java.util.List;
+import modelo.Producto;
 
 public class InventarioVista {
 
@@ -55,6 +57,31 @@ public class InventarioVista {
         } catch (NumberFormatException e) {
             return 0.0;
         }
+    }
+
+    public void mostrarProducto(Producto p) {
+    if (p == null) {
+        System.out.println("Producto no encontrado.");
+    } else {
+        System.out.println("\n--- Producto ---");
+        System.out.println(p);
+    }
+}
+
+    public void mostrarLista(List<Producto> lista) {
+        System.out.println("\n=== Lista de Productos ===");
+        if (lista == null || lista.isEmpty()) {
+            System.out.println("No hay productos en el inventario.");
+            return;
+        }
+
+        for (Producto p : lista) {
+            System.out.println(p);
+        }
+    }
+
+    public void mostrarMensaje(String msg) {
+        System.out.println(msg);
     }
 
 }
